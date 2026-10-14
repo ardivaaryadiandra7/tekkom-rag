@@ -1,5 +1,4 @@
 import re
-
 import pandas as pd
 
 class Helper:
@@ -25,33 +24,7 @@ class Helper:
 
     @staticmethod
     def nama_tanpa_gelar(nama: str) -> str:
-        gelar = {
-            "Prof.",
-            "Dr.",
-            "Ir.",
-            "S.T.",
-            "M.T.",
-            "M.Sc.",
-            "M.Eng.",
-            "M.Kom.",
-            "M.Kom",
-            "S.Kom",
-            "S.Kom.",
-            "S.Pd",
-            "S.Pd.",
-            "S.Si",
-            "S.Si.",
-            "S.E",
-            "S.E.",
-            "S.H",
-            "S.H.",
-            "S.Ars",
-            "S.Ars.",
-            "M.Ars",
-            "M.Ars.",
-            "M.Sn",
-            "M.Sn.",
-        }
+        gelar = {'Prof.', 'Dr.', 'Ir.', 'S.T.', 'M.T.', 'M.Sc.', 'M.Eng.', 'M.Kom.', 'S.Kom', 'S.Si', 'S.Si.', 'S.H', 'S.H.', 'Eng.', 'Dr.Eng.', 'Dra.', 'Drs.'}
 
         nama = nama.split(",")[0].split(" ")
         nama = [kata for kata in nama if kata not in gelar]
