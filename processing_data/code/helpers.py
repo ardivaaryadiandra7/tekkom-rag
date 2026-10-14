@@ -16,11 +16,12 @@ class Helper:
         return t.strip()
 
     @staticmethod
-    def slug(teks: str) -> str:
-        if pd.isna(teks):
-            return ""
-        teks = teks.split(" ")
-        return "-".join(teks).lower()
+    def buat_slug(nama: str) -> str:
+        if (nama == ""):
+            raise ValueError("Nama tidak boleh kosong")
+        
+        slug = nama.lower().split(' ')
+        return '-'.join(slug)
 
     @staticmethod
     def nama_tanpa_gelar(nama: str) -> str:
